@@ -1,4 +1,5 @@
 import { Slider } from "@/components/slider";
+import { Trending } from "@/components/trending";
 import Image from "next/image";
 
 
@@ -6,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Slider/>
-      
+      <Trending/>
     </div>
   );
 }

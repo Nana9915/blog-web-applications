@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export const Slider = () => {
   return (
-    <div className="mt-[100px] w-[1216px] mx-auto">
-      <div className="mb-[151px]">
+    <header>
+      <div className="mt-[100px] w-[1216px] mx-auto mb-[100px]">
         <div className="relative">
           <Image
             src="/image.jpeg"
@@ -25,7 +25,62 @@ export const Slider = () => {
             <p>August 20, 2022</p>
           </div>
         </div>
+
+        <div className="flex gap-[9px] mt-[11px] ml-[1127px]">
+          <div>
+            <a href="#">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="39"
+                  height="39"
+                  rx="5.5"
+                  stroke="#696A75"
+                />
+                <path
+                  d="M23.5 27L16 19.5L23.5 12"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="39"
+                  height="39"
+                  rx="5.5"
+                  stroke="#696A75"
+                />
+                <path
+                  d="M16 12L23.5 19.5L16 27"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
