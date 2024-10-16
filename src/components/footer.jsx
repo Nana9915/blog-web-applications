@@ -143,7 +143,7 @@ export const Footer = () => {
 
       <div className="w-[1216px] mx-auto flex justify-between items-center pb-[95px] border-t border-[#DCDDDF] border-solid border-collapse ">
         <div className="mt-[20px]">
-          <Image width={231} height={54} src="/logo1.png" />
+          <Image width={231} height={54} src="/logo1.png" alt=""/>
         </div>
         <div className="flex gap-[32px] text-[#3B3C4A] font-normal text-base mt-[20px]">
           <p>Terms of Use</p>
