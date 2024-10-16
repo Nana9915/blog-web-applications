@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 export const Footer = () => {
   return (
@@ -21,16 +23,20 @@ export const Footer = () => {
           </p>
         </div>
 
-        <div className="text-[#3B3C4A] font-normal text-base">
-          <ul>
-            <li className="mb-2">Home</li>
-            <li className="mb-2">Blog</li>
-            <li className="mb-2">Contact</li>
-          </ul>
+        <div className="text-[#3B3C4A] font-normal text-base flex flex-col gap-2">
+          <Link className="hover:underline" href={"#"}>
+            Home
+          </Link>
+          <Link className="hover:underline" href={"#"}>
+            Blog
+          </Link>
+          <Link className="hover:underline" href={"#"}>
+            Contact
+          </Link>
         </div>
 
-        <div className="flex gap-[26px]">
-          <div>
+        <div className="flex gap-[26px] ">
+          <div className="cursor-pointer">
             <svg
               width="16"
               height="16"
@@ -51,7 +57,7 @@ export const Footer = () => {
               </defs>
             </svg>
           </div>
-          <div>
+          <div className="cursor-pointer">
             <svg
               width="17"
               height="16"
@@ -77,7 +83,7 @@ export const Footer = () => {
               </defs>
             </svg>
           </div>
-          <div>
+          <div className="cursor-pointer">
             <svg
               width="17"
               height="16"
@@ -111,7 +117,7 @@ export const Footer = () => {
               </defs>
             </svg>
           </div>
-          <div>
+          <div className="cursor-pointer">
             <svg
               width="16"
               height="16"
