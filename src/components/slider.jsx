@@ -1,85 +1,95 @@
+"use client";
 import Image from "next/image";
+import Slider from "react-slick";
 
-export const Slider = () => {
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function CustomArrows() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
+  };
+}
+
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
+
+export const Carousel = () => {
   return (
     <div className="container mb-[100px]">
-      <div className="relative h-[600px] rounded-xl overflow-hidden">
-        <Image
-          src="/image.jpeg"
-          width={1216}
-          height={600}
-          className=" h-full w-full object-cover"
-        />
-        <div className="bg-[#141624]/40 absolute inset-0" />
-        <div className="p-10 bg-[#FFFFFF] border-collapse border-solid border-[#E8E8EA] border w-[598px] rounded-[12px] shadow-[0px_12px_24px_-6px_#181A2A1F] absolute left-3 bottom-3">
-          <div className="bg-[#4B6BFB] inline-block rounded-[6px] px-[10px] py-[4px] font-medium text-[#FFFFFF] text-[14px] leading-[20px] mb-4">
-            Technology
-          </div>
-          <div className="text-[#181A2A] font-semibold text-[36px] leading-10 mb-6">
-            <p>
-              Grid system for better <br /> Design User Interface
-            </p>
-          </div>
-          <div className="font-normal text-base text-[#97989F]">
-            <p>August 20, 2022</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex gap-[9px] mt-[11px] ml-[1127px]">
+      <Slider {...settings}>
         <div>
-          <a href="#">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="0.5"
-                y="0.5"
-                width="39"
-                height="39"
-                rx="5.5"
-                stroke="#696A75"
-              />
-              <path
-                d="M23.5 27L16 19.5L23.5 12"
-                stroke="black"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
+          <div className="relative h-[600px] rounded-xl overflow-hidden">
+            <Image
+              src="/image.jpeg"
+              width={1216}
+              height={600}
+              className=" h-full w-full object-cover"
+              alt=""
+            />
+            <div className="bg-[#141624]/40 absolute inset-0" />
+            <div className="p-10 bg-[#FFFFFF] border-collapse border-solid border-[#E8E8EA] border w-[598px] rounded-[12px] shadow-[0px_12px_24px_-6px_#181A2A1F] absolute left-3 bottom-3">
+              <div className="bg-[#4B6BFB] inline-block rounded-[6px] px-[10px] py-[4px] font-medium text-[#FFFFFF] text-[14px] leading-[20px] mb-4">
+                Technology
+              </div>
+              <div className="text-[#181A2A] font-semibold text-[36px] leading-10 mb-6">
+                <p>
+                  Grid system for better <br /> Design User Interface
+                </p>
+              </div>
+              <div className="font-normal text-base text-[#97989F]">
+                <p>August 20, 2022</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
-          <a href="#">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="0.5"
-                y="0.5"
-                width="39"
-                height="39"
-                rx="5.5"
-                stroke="#696A75"
-              />
-              <path
-                d="M16 12L23.5 19.5L16 27"
-                stroke="black"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
+          <div className="relative h-[600px] rounded-xl overflow-hidden">
+            <Image
+              src="/image.jpeg"
+              width={1216}
+              height={600}
+              className=" h-full w-full object-cover"
+              alt=""
+            />
+            <div className="bg-[#141624]/40 absolute inset-0" />
+            <div className="p-10 bg-[#FFFFFF] border-collapse border-solid border-[#E8E8EA] border w-[598px] rounded-[12px] shadow-[0px_12px_24px_-6px_#181A2A1F] absolute left-3 bottom-3">
+              <div className="bg-[#4B6BFB] inline-block rounded-[6px] px-[10px] py-[4px] font-medium text-[#FFFFFF] text-[14px] leading-[20px] mb-4">
+                Technology
+              </div>
+              <div className="text-[#181A2A] font-semibold text-[36px] leading-10 mb-6">
+                <p>
+                  Grid system for better <br /> Design User Interface
+                </p>
+              </div>
+              <div className="font-normal text-base text-[#97989F]">
+                <p>August 20, 2022</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </Slider>
     </div>
   );
 };

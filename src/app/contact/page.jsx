@@ -60,7 +60,7 @@ const ContactUs = () => {
               type="text"
               name="q"
               placeholder="write a message"
-              className="w-[478px] h-[134px] pl-5 pt-[14px] border border-[#DCDDDF] bg-[#FFFFFF] rounded-[5px] mb-[29px]"
+              className="w-[478px] h-[134px] pl-5 pt-[14px] border border-[#DCDDDF] bg-[#FFFFFF] rounded-[5px] mb-[29px] resize-none"
             />
           </div>
           <div className="bg-[#4B6BFB] rounded-md inline-block py-[10px] px-4">
