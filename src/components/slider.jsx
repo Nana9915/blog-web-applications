@@ -5,39 +5,69 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+function SampleNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className={"cursor-pointer hover:opacity-50 absolute -bottom-10 right-12 w-10 h-10 rounded-md border-[#696A75] border flex justify-center items-center"
+      } onClick={onClick}>
+      <svg
+        width="9"
+        height="17"
+        viewBox="0 0 9 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8.5 16L1 8.5L8.5 1"
+          stroke="black"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
+  );
+}
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      className={
+        "cursor-pointer hover:opacity-50 absolute -bottom-10 right-0 w-10 h-10 rounded-md border-[#696A75] border flex justify-center items-center"
+      }
       onClick={onClick}
-    />
+    >
+      <svg
+        width="9"
+        height="17"
+        viewBox="0 0 9 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 1L8.5 8.5L1 16"
+          stroke="black"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
   );
 }
 
-function CustomArrows() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
-  };
-}
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
 
 export const Carousel = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
   return (
-    <div className="container mb-[100px]">
+    <div className="container mb-[100px] relative">
       <Slider {...settings}>
         <div>
           <div className="relative h-[600px] rounded-xl overflow-hidden">
