@@ -43,9 +43,9 @@ export const AllPost = async () => {
       </div>
       <div className="grid grid-rows-3 grid-cols-1 gap-5 mb-8 md:grid-cols-2 lg:grid-cols-3">
         {data.items.map((item) => (
-          <div key={item.id}>
+          <Link key={item.id} className="block" href={`/blog/${item.id}`}>
             <BlogPosts post={item} />
-          </div>
+          </Link>
         ))}
       </div>
       <div className="flex justify-center">

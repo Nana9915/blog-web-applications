@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const NotFound = () => {
     return (
       <div className="container flex justify-center items-center  mb-[100px]">
@@ -14,14 +16,14 @@ const NotFound = () => {
               </div>
               <div className="mb-5">
                 <p className="text-[#696A75] font-normal text-lg">
-                  We're sorry, This page is unknown or does not exist the page
+                  We are sorry, This page is unknown or does not exist the page
                   you are looking for.
                 </p>
               </div>
               <div className="bg-[#4B6BFB] inline-block py-[10px] px-4 rounded-[6px] cursor-pointer">
-                <p className="text-[#FFFFFF] font-medium text-sm">
+                <Link href="/" className="text-[#FFFFFF] font-medium text-sm">
                   Back to home
-                </p>
+                </Link>
               </div>
             </div>
           </div>
