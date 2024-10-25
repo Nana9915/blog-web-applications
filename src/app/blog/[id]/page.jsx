@@ -30,9 +30,11 @@ const ArticleRead = async ({ params }) => {
   const post = await response.json();
 
   return (
-    <section className="container">
-      <h1>{post.title}</h1>
-      <div className="flex items-center gap-5">
+    <section className="container mb-20">
+      <h1 className="color-[#181A2A] font-semibold text-4xl mb-5">
+        {post.title}
+      </h1>
+      <div className="flex items-center gap-5 mb-8">
         <div className="flex items-center gap-3">
           <Image
             alt={post.authorName}
@@ -41,16 +43,18 @@ const ArticleRead = async ({ params }) => {
             height={36}
             className="object-cover rounded-full aspect-square"
           />
-          <p className="text-[#97989F] font-medium">{post.authorName}</p>
+          <p className="text-[#97989F] font-medium text-[14px]">
+            {post.authorName}
+          </p>
         </div>
-        <p className="text-[#97989F]">
+        <p className="text-[#97989F] font-normal text-[14px]">
           {dayjs(post.createdAt).format("MMMM DD, YYYY")}
         </p>
       </div>
       <Image src={post.image} width={1920} height={1080} alt="" />
 
       <div
-        className="content"
+        className="content mt-8"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </section>
