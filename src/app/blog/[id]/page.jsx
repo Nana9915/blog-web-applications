@@ -51,7 +51,7 @@ const ArticleRead = async ({ params }) => {
           {dayjs(post.createdAt).format("MMMM DD, YYYY")}
         </p>
       </div>
-      <Image src={post.image} width={1920} height={1080} alt="" />
+      <Image src={post.image} width={1920} height={1080} alt="" className="rounded-xl mb-8" />
 
       <div
         className="content mt-8"

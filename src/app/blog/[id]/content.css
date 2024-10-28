@@ -115,6 +115,7 @@
   border-color: #007bff;
   max-width: 100% !important;
   height: auto !important;
+
 }
 
 .content table {
@@ -247,4 +248,8 @@
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+}
+.content img {
+  border-radius: 12px;
+  margin-bottom: 32px;
 }

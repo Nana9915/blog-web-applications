@@ -7,22 +7,22 @@ export const Header = () => {
       <div className="container flex items-center justify-between">
         <div>
           <Link href="/">
-            <Image width={158} height={36} src="/logo.png" alt=""/>
+            <Image width={158} height={36} src="/logo.png" alt="" />
           </Link>
         </div>
         <div className="flex gap-10 text-[#3B3C4A] font-normal text-base ">
-          <Link className="hover:underline" href={"#"}>
+          <Link className="hover:underline" href={"/"}>
             Home
           </Link>
-          <Link className="hover:underline" href={"#"}>
+          <Link className="hover:underline" href={"/blog"}>
             Blog
           </Link>
-          <Link className="hover:underline" href={"#"}>
+          <Link className="hover:underline" href={"/contact"}>
             Contact
           </Link>
         </div>
         <div>
-          <form className="relative">
+          <form action={"/blog"} className="relative">
             <input
               className="bg-[#F4F4F5] w-40 h-9 pl-4 pr-9 rounded-[5px] overflow-hidden"
               type="text"

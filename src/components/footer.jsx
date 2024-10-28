@@ -24,13 +24,13 @@ export const Footer = () => {
         </div>
 
         <div className="text-[#3B3C4A] font-normal text-base flex flex-col gap-2">
-          <Link className="hover:underline" href={"#"}>
+          <Link className="hover:underline" href={"/"}>
             Home
           </Link>
-          <Link className="hover:underline" href={"#"}>
+          <Link className="hover:underline" href={"/blog"}>
             Blog
           </Link>
-          <Link className="hover:underline" href={"#"}>
+          <Link className="hover:underline" href={"/contact"}>
             Contact
           </Link>
         </div>
@@ -143,7 +143,7 @@ export const Footer = () => {
 
       <div className="w-[1216px] mx-auto flex justify-between items-center pb-[95px] border-t border-[#DCDDDF] border-solid border-collapse ">
         <div className="mt-[20px]">
-          <Image width={231} height={54} src="/logo1.png" alt=""/>
+          <Image width={231} height={54} src="/logo1.png" alt="" />
         </div>
         <div className="flex gap-[32px] text-[#3B3C4A] font-normal text-base mt-[20px]">
           <p>Terms of Use</p>
