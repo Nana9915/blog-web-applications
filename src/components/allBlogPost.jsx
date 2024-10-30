@@ -54,6 +54,7 @@ export const AllPost = async () => {
           </Link>
         ))}
       </div>
+      
     </section>
   );
 };
