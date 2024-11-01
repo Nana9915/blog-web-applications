@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BlogPosts } from "@/components/Posts";
@@ -6,19 +6,31 @@ import { BlogPosts } from "@/components/Posts";
 const BlogPage = ({ searchParams }) => {
   const { q = "", page = 1 } = searchParams;
   const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
-        `https://next-mock-api.vercel.app/api/posts?size=12&page=${page}&q=${q}`
-      );
-      const result = await response.json();
-      setData(result);
+      try {
+        setLoading(true);
+        const response = await fetch(
+          `https://next-mock-api.vercel.app/api/posts?size=12&page=${page}&q=${q}`
+        );
+        if (!response.ok) throw new Error("Network response was not ok");
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
   }, [q, page]);
 
+  if (loading) return <p className="container">Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <section className="container">
@@ -48,6 +60,9 @@ const BlogPage = ({ searchParams }) => {
                     ? "text-blue-600 bg-blue-50"
                     : "text-gray-500 bg-white"
                 } border border-gray-300 hover:bg-gray-100 hover:text-gray-700`}
+                aria-current={
+                  index + 1 === data.pageInfo.page ? "page" : undefined
+                }
               >
                 {index + 1}
               </Link>
