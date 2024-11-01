@@ -11,13 +11,13 @@ export const Header = () => {
           </Link>
         </div>
         <div className="flex gap-10 text-[#3B3C4A] font-normal text-base ">
-          <Link className="hover:underline" href={"/"}>
+          <Link className="hover:text-[#D4A373] duration-500" href={"/"}>
             Home
           </Link>
-          <Link className="hover:underline" href={"/blog"}>
+          <Link className="hover:text-[#D4A373] duration-500" href={"/blog"}>
             Blog
           </Link>
-          <Link className="hover:underline" href={"/contact"}>
+          <Link className="hover:text-[#D4A373] duration-500" href={"/contact"}>
             Contact
           </Link>
         </div>
